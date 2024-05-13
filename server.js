@@ -9,7 +9,7 @@ const Replicate = require('replicate');
 const path = require('path');
 
 // MongoDB connection
-mongoose.connect('mongodb://localhost:27017/myapp', { useNewUrlParser: true, useUnifiedTopology: true })
+mongoose.connect('mongodb+srv://sashank-27:Sashan12k@cluster0.jyfj7kr.mongodb.net/', { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => {
     console.log('Connected to MongoDB');
   })
