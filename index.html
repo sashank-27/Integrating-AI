@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href = "/sources/WebLogo.png"  type = "x-icon" rel = "shortcut icon"> 
+    <title>Integrating ALL AI TOOLS</title>
+    <link rel = "stylesheet" href = "style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous"/>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/28a0d63cc0.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-static-website/js/ccbp-ui-kit.js"></script>
+</head>
+<body>
+    <nav>
+        <ul class="sidebar">
+          <li onclick="hideSidebar"><a href=""><span class="material-symbols-outlined">
+            close
+            </span></a></li>
+        <li><a  href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="signin.html">Sign In</a></li>
+        
+      </ul>
+      <ul>
+        
+        <li><a href="index.html">Integrating-AI</a></li>
+        <li class="hideOnMobile"><a href="#">Home</a></li>
+        <li class="hideOnMobile"><a href="#">About</a></li>
+        <li class="hideOnMobile"><a href="#">Contact</a></li>
+        <li class="hideOnMobile"><a href="signin.html">Sign In</a></li>
+        <li onclick="showSidebar()" class="menu-bar"><a  href="#"><span class=" material-symbols-outlined" ">
+          menu
+          </span></a></li>
+           
+        </nav>
+        <div class = "container p-4" id = "#sectionHome">
+            <div class = "row">
+                <div class = "col-12 text-center w-80 p-2 mt-1">
+                  <section class = "integrate-margin">
+                    <h1 class = "integrate-main-headidng mt-4">Discover what AI can do For you</h1>
+                    <p class = "mb-4"> Maximizing Efficiency Through Unified Tool Integration</p>
+                    <form action="#" class="search ">
+                        <button type="button" class="search__button ">
+                          <div class="search__icon">
+                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+                              <title>magnifying-glass</title>
+                              <path d="M17.545 15.467l-3.779-3.779c0.57-0.935 0.898-2.035 0.898-3.21 0-3.417-2.961-6.377-6.378-6.377s-6.186 2.769-6.186 6.186c0 3.416 2.961 6.377 6.377 6.377 1.137 0 2.2-0.309 3.115-0.844l3.799 3.801c0.372 0.371 0.975 0.371 1.346 0l0.943-0.943c0.371-0.371 0.236-0.84-0.135-1.211zM4.004 8.287c0-2.366 1.917-4.283 4.282-4.283s4.474 2.107 4.474 4.474c0 2.365-1.918 4.283-4.283 4.283s-4.473-2.109-4.473-4.474z"></path>
+                            </svg>
+                          </div>
+                        </button>
+                        <input type="text" class="search__input" placeholder="Enter the  tool name">
+                           <button type="button" id="sendButton">
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 664 663">
+                        <path
+                          fill="none"
+                          d="M646.293 331.888L17.7538 17.6187L155.245 331.888M646.293 331.888L17.753 646.157L155.245 331.888M646.293 331.888L318.735 330.228L155.245 331.888"
+                        ></path>
+                        <path
+                          stroke-linejoin="round"
+                          stroke-linecap="round"
+                          stroke-width="33.67"
+                          stroke="#6c6c6c"
+                          d="M646.293 331.888L17.7538 17.6187L155.245 331.888M646.293 331.888L17.753 646.157L155.245 331.888M646.293 331.888L318.735 330.228L155.245 331.888"
+                        ></path>
+                      </svg>
+                    </button>
+                          </div>
+                        </button>
+                      </form>
+                    </section>
+                </div>
+            </div>
+            <div class = "container mt-4 mb-4">
+              <div class = "row">
+                <div class = "d-none col-md-12 d-md-inline Grid-button">
+                    
+                    <button id = "gridButton" class="mb-4 rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border bg-background hover:bg-accent hover:text-accent-foreground h-10 px-4 py-2 w-30 items-center justify-center gap-2 border-gray-400 hidden md:flex"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-grid3x3"><rect width="18" height="18" x="3" y="3" rx="2"></rect><path d="M3 9h18"></path><path d="M3 15h18"></path><path d="M9 3v18"></path><path d="M15 3v18"></path></svg>View</button>
+                </div>
+                <div class = "col-12 mt-2 col-md-4" id = "firstCard">
+                  <div class = "card-container w-100">
+                    <img src = "" class = ""/>
+                    <h3>Image Generator</h3>
+                    <p>Out Innovative AI-powered tool allows you to generatea images from text to image effortlessly</p>
+                    <button class="button-click-here" data-toggle="modal" data-target="#exampleModal">
+                      <span class="button-content">Click Here </span>
+                    </button>
+                      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                          <div class="modal-content modal-style-width">
+                            <div class="modal-header">
+                              <h5 class="modal-title" id="exampleModalLabel">AI Stable Diffusion</h5>
+                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                              </button>
+                            </div>
+                            <div class="modal-body text-center">
+                                <h1 class = "modal-main-head">AI Image Generator</h1>
+                                <p class = "modal-paragraph mb-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, sapiente reiciendis at, eos voluptates obcaecati repudiandae iure aspernatur quas nisi ab voluptas animi labore optio repellat maiores voluptate cupiditate quibusdam.</p>
+                                <textarea cols = "40" row = "50" id = "prompt" placeholder="Enter Your Prompt" class = "prompt-textarea mb-2"></textarea>
+                                <br/>
+                                <div style="text-align: center;">
+                                <button class="generate-btn" id = "generateImgBtn">
+                                  <svg height="24" width="24" fill="#FFFFFF" viewBox="0 0 24 24" data-name="Layer 1" class="generate-sparkle">
+                                      <path d="M10,21.236,6.755,14.745,0.264,11.5,6.755,8.255,10,1.764l3.245,6.491L19.736,11.5l-6.491,3.245ZM18,21l1.5,3L21,21l3-1.5L21,18l-1.5-3L18,18l-3,1.5ZM19.333,4.667,20.5,7l1.167-2.333L24,3.5,21.667,2.333,20.5,0,19.333,2.333,17,3.5Z"></path>
+                                  </svg>
+                                  <span class="generate-text mb-2">Generate</span>
+                                </button>
+                              
+                                <div id = "imageContainer" class = "mb-4">
+                                  <div id = "spinner" class = "d-none">
+                                    <div class="spinner-border mt-4" role="status">
+                                      <span class="sr-only">Loading...</span>
+                                    </div>
+                                  </div>
+                                    <img src = "" id = "imageEl" alt = "" class = "w-100 "/>
+                                  <br/>
+                                </div>
+                                <div class="m-auto">
+                                  <button class="download-button d-none" type="button" id = "downloadButton">
+                                    <span class="download-button__text">Download</span>
+                                    <span class="download-button__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 35 35" id="bdd05811-e15d-428c-bb53-8661459f9307" data-name="Layer 2" class="download-svg"><path d="M17.5,22.131a1.249,1.249,0,0,1-1.25-1.25V2.187a1.25,1.25,0,0,1,2.5,0V20.881A1.25,1.25,0,0,1,17.5,22.131Z"></path><path d="M17.5,22.693a3.189,3.189,0,0,1-2.262-.936L8.487,15.006a1.249,1.249,0,0,1,1.767-1.767l6.751,6.751a.7.7,0,0,0,.99,0l6.751-6.751a1.25,1.25,0,0,1,1.768,1.767l-6.752,6.751A3.191,3.191,0,0,1,17.5,22.693Z"></path><path d="M31.436,34.063H3.564A3.318,3.318,0,0,1,.25,30.749V22.011a1.25,1.25,0,0,1,2.5,0v8.738a.815.815,0,0,0,.814.814H31.436a.815.815,0,0,0,.814-.814V22.011a1.25,1.25,0,1,1,2.5,0v8.738A3.318,3.318,0,0,1,31.436,34.063Z"></path></svg></span>
+                                  </button>
+                                </div>
+                            </div>
+                            </div>
+                            <div class="modal-footer">
+                              <button class="logout-btn" data-dismiss="modal">
+                                <div class="logout-sign">
+                                    <svg viewBox="0 0 512 512">
+                                        <path d="M377.9 105.9L500.7 228.7c7.2 7.2 11.3 17.1 11.3 27.3s-4.1 20.1-11.3 27.3L377.9 406.1c-6.4 6.4-15 9.9-24 9.9c-18.7 0-33.9-15.2-33.9-33.9l0-62.1-128 0c-17.7 0-32-14.3-32-32l0-64c0-17.7 14.3-32 32-32l128 0 0-62.1c0-18.7 15.2-33.9 33.9-33.9c9 0 17.6 3.6 24 9.9zM160 96L96 96c-17.7 0-32 14.3-32 32l0 256c0 17.7 14.3 32 32 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-64 0c-53 0-96-43-96-96L0 128C0 75 43 32 96 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32z"></path>
+                                    </svg>
+                                </div>
+                                <div class="logout-text">Exit</div>
+                            </button>
+                            
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                  </div>
+                </div>
+                <div class = "col-12 mt-2 col-md-4" id = "secondCard">
+                  <div class = "card-container w-100">
+                    <img src = "" class = ""/>
+                    <h3>Video Generator</h3>
+                    <p>Out Innovative AI-powered tool allows you to generatea images from text to image effortlessly</p>
+                    <button class="button-click-here" data-toggle="modal" data-target="#customModal">
+                      <span class="button-content">Click Here </span>
+                    </button>
+                    <div class="modal fade" id="customModal" tabindex="-1" aria-labelledby="customModalLabel" aria-hidden="true">
+                      <div class="modal-dialog">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 class="modal-title" id="customModalLabel">Custom Modal Title</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                              <span aria-hidden="true">&times;</span>
+                            </button>
+                          </div>
+                          <div class="modal-body">
+                            <h3>Video Generator</h3>
+                            <p class = "modal-paragraph mb-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, sapiente reiciendis at, eos voluptates obcaecati repudiandae iure aspernatur quas nisi ab voluptas animi labore optio repellat maiores voluptate cupiditate quibusdam.</p>
+                            <textarea cols = "40" row = "50" id = "promptVideo" placeholder="Enter Your Prompt" class = "prompt-textarea mb-2"></textarea>
+                            <br/>
+                            <button class="generate-btn mb-4" id = "generateVideoBtn">
+                              <svg height="24" width="24" fill="#FFFFFF" viewBox="0 0 24 24" data-name="Layer 1" class="generate-sparkle">
+                                  <path d="M10,21.236,6.755,14.745,0.264,11.5,6.755,8.255,10,1.764l3.245,6.491L19.736,11.5l-6.491,3.245ZM18,21l1.5,3L21,21l3-1.5L21,18l-1.5-3L18,18l-3,1.5ZM19.333,4.667,20.5,7l1.167-2.333L24,3.5,21.667,2.333,20.5,0,19.333,2.333,17,3.5Z"></path>
+                              </svg>
+                              <span class="generate-text mb-2">Generate</span>
+                            </button>
+                            <div id = "video-container" class = "mb-3">
+                              <div id = "spinnerVideo" class = "d-none">
+                                <div class="spinner-border mt-4" role="status">
+                                  <span class="sr-only">Loading...</span>
+                                </div>
+                              </div>
+                              <div id="videoContainer" class="mb-4">
+                                <video controls id="videoEl" class = "d-none">
+                                    <source src="" type="video/mp4" autoplay>
+                                </video>
+                            </div>
+                            </div>
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Save changes</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+                <div class = "col-12 mt-2 col-md-4" id = "thirdCard">
+                  <div class = "card-container w-100">
+                    <img src = "" class = ""/>
+                    <h3>Audio Generator</h3>
+                    <p>Out Innovative AI-powered tool allows you to generatea images from text to image effortlessly.</p>
+                  <button type="button" class="button-click-here" data-toggle="modal" data-target="#thirdmodal">
+                    Click Here
+                  </button>
+                  <div class="modal fade" id="thirdmodal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                          </button>
+                        </div>
+                        <div class="modal-body">
+                          <h1>Text to Audio</h1>
+                          <textarea id="audioPrompt" placeholder="Enter prompt" class = "prompt-textarea mb-2"></textarea>
+                          <br/>
+                          <button class="generate-btn mb-4" id = "generateVideoBtn">
+                            <svg height="24" width="24" fill="#FFFFFF" viewBox="0 0 24 24" data-name="Layer 1" class="generate-sparkle">
+                                <path d="M10,21.236,6.755,14.745,0.264,11.5,6.755,8.255,10,1.764l3.245,6.491L19.736,11.5l-6.491,3.245ZM18,21l1.5,3L21,21l3-1.5L21,18l-1.5-3L18,18l-3,1.5ZM19.333,4.667,20.5,7l1.167-2.333L24,3.5,21.667,2.333,20.5,0,19.333,2.333,17,3.5Z"></path>
+                            </svg>
+                            <span class="generate-text mb-2">Generate</span>
+                          </button>                          <div id="audioContainer" class="mb-4">
+                              <h1 id = "audioTest">url:</h1>
+                              <audio controls id="audioEl">
+                                  <!-- Initially, no source -->
+                              </audio>   
+                              <br/>
+                          </div>
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                  </div>
+                </div>
+              </div>
+              </div>
+        <div class = "integrating-second-main-background">
+          <div class = "container">
+            <div class = "row">
+              <div class = "col-12 mb-4">
+                <h1 class = "second-back-main-heading">About Us</h1>
+              </div>
+              <div class = "col-12 col-md-4">
+                <img src = "https://res.cloudinary.com/deecdwlz4/image/upload/v1715349416/Yellow_Orange_Bright_Team_Work_Instagram_Post_qp8ub2.png" alt="Image" class = "second-section-main-image"/>
+              </div>
+              <div class = "col-12 col-md-8">
+                <p class = "mt-4 second-section-paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias nesciunt id, omnis possimus quidem debitis exercitationem minus. Dolore voluptatem illum fugit! Asperiores nemo earum cum, libero saepe voluptatem possimus omnis? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequatur, quibusdam ducimus optio at soluta voluptatem sint sequi minima repellat temporibus obcaecati ipsam fugit repudiandae eum possimus, eveniet doloribus amet reprehenderit? Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem enim maxime assumenda corporis minus quam, ratione blanditiis vero modi alias numquam, eveniet maiores corrupti veritatis, quo earum veniam labore. Modi! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sed et non, perferendis excepturi dicta animi molestiae perspiciatis iure dolore deserunt praesentium, expedita, sapiente minima natus voluptates dolorem reiciendis labore minus!</p>
+              </div>
+            </div>
+          </div>
+        </div>
+          <div class="healthy-food-section pt-5 pb-5">
+                  <div class="container">
+                    <div class="row">
+                      <div class="col-12 col-md-4">
+                        <div class="text-center">
+                          <img
+                            src="https://res.cloudinary.com/dbylngblb/image/upload/v1708422871/unified-api-platform-what_f1efje.png"
+                            class="healthy-food-section-img"
+                          />
+                        </div>
+                      </div>
+                      <div class="col-12 col-md-8">
+                        <h1 class="healthy-food-section-heading">
+                          UNITED PLATFORM
+                        </h1>
+                        <p class="healthy-food-section-description">
+                          Unified Platform: Say goodbye to navigating multiple platforms. We provide a single, cohesive environment where you can access various AI integration tools, streamlining your workflow and saving you time.
+                        </p>
+                        <button class="custom-button">Watch Video</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="delivery-and-payment-section pt-5 pb-5" id="deliveryPaymentSection">
+                  <div class="container">
+                    <div class="row">
+                      <div class="col-12 col-md-3 order-1 order-md-2">
+                        <div class="text-center">
+                          <img
+                            src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/delivery-payment-section-img.png"
+                            class="delivery-and-payment-section-img"
+                          />
+                        </div>
+                      </div>
+                      <div class="col-12 col-md-9 order-2 order-md-1">
+                        <h1 class="delivery-and-payment-section-heading">
+                          Delivery and Payment
+                        </h1>
+                        <p class="delivery-and-payment-section-description">
+                          Enjoy hassle-free payment with the plenitude of payment options
+                          available for you. Get live tracking and locate your food on a
+                          live map. It's quite a sight to see your food arrive to your door.
+                          Plus, you get a 5% discount on every order every time you pay
+                          online.
+                        </p>
+                        <button class="custom-button" onclick = "display('sectionHome')">Order Now</button>
+                        </div>
+                        </div>
+                        </div>
+              </div>
+      </div>
+    <footer class="footer-container">
+      <div class="row-container">
+          <div class="column-container">
+              <a href="#" class="logo-link">YOUR LOGO</a>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod ipsa voluptate possimus magnam sapiente
+                  rem! Iusto, ipsa, cumque sint itaque sequi quod porro amet, totam perspiciatis rem quos blanditiis
+                  adipisci.</p>
+          </div>
+          <div class="column-container">
+              <h3>Categories <div class="animation-underline mt-2"><span></span></div>
+              </h3>
+              <p>lorem</p>
+              <p>lorem</p>
+              <p>lorem</p>
+              <p>lorem</p>
+              <p class="email-id">example@gmail.com</p>
+              <h4>+911234567890</h4>
+          </div>
+          <div class="column-container links">
+              <h3>Links <div class="animation-underline mt-2"><span></span></div>
+              </h3>
+              <ul>
+                <p>lorem</p>
+                <p>lorem</p>
+                <p>lorem</p>
+                <p>lorem</p>
+              </ul>
+          </div>
+          <div class="column-container">
+              <h3>Newletter <div class="animation-underline mt-2"><span></span></div>
+              </h3>
+              <form class="input-form">
+                  <i class="far envelope-icon fa-envelope"></i>
+                  <input class="footer-input" type="email" placeholder="Enter your email ID" required>
+                  <button  type="submit"><i class="arrow-icon fa-solid fa-arrow-right"></i></button>
+              </form>
+              <div class="social-icons">
+                  <i class="fa-brands fa-instagram"></i>
+                  <i class="brand-icon fa-brands fa-twitter"></i>
+              </div>
+          </div>
+      </div>
+      <hr class="horizontal-rule">
+      <p class="copyright-text">Team vision © 2024 - All copyright Received.</p>
+  </footer>
+        <script src = "script.js"></script>
+</body>
+</html>
+
+
