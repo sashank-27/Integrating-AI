@@ -9,7 +9,8 @@ const Replicate = require('replicate');
 const path = require('path');
 
 // MongoDB connection
-mongoose.connect('mongodb+srv://sashank-27:Sashan12k@cluster0.jyfj7kr.mongodb.net/', { useNewUrlParser: true, useUnifiedTopology: true })
+const mongoUri = process.env.MONGO_URI || 'your_fallback_mongo_uri';
+mongoose.connect(mongoUri, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => {
     console.log('Connected to MongoDB');
   })
@@ -147,9 +148,9 @@ app.post('/generate-image', isAuth, async (req, res) => {
     console.log('Output object:', output);
 
     // Check if the output contains a valid URL
-    if (output) {
+    if (output && output.length > 0 && output[0].image) {
       // Send the URL in the response
-      res.json({ success: true, imageUrl: output });
+      res.json({ success: true, imageUrl: output[0].image });
     } else {
       // Log an error if the URL is not found
       console.error('Image URL not found in the response:', output);
@@ -181,18 +182,18 @@ app.post('/generate-video', isAuth, async (req, res) => {
     console.log('Output object:', output);
 
     // Check if the output contains a valid URL
-    if (output) {
+    if (output && output.length > 0 && output[0].video) {
       // Send the URL in the response
-      res.json({ success: true, videoUrl: output });
+      res.json({ success: true, videoUrl: output[0].video });
     } else {
       // Log an error if the URL is not found
       console.error('Video URL not found in the response:', output);
-      res.status(500).json({ success: false, error: 'Failed to generate image' });
+      res.status(500).json({ success: false, error: 'Failed to generate video' });
     }
   } catch (error) {
-    // Log and handle any errors that occur during image generation
-    console.error('Error generating image:', error);
-    res.status(500).json({ success: false, error: 'Failed to generate image' });
+    // Log and handle any errors that occur during video generation
+    console.error('Error generating video:', error);
+    res.status(500).json({ success: false, error: 'Failed to generate video' });
   }
 });
 
@@ -215,9 +216,9 @@ app.post('/generate-audio', isAuth, async (req, res) => {
     console.log('Output object:', output);
 
     // Check if the output contains a valid URL
-    if (output) {
+    if (output && output.length > 0 && output[0].audio) {
       // Send the URL in the response
-      res.json({ success: true, audioUrl: output });
+      res.json({ success: true, audioUrl: output[0].audio });
     } else {
       // Log an error if the URL is not found
       console.error('Audio URL not found in the response:', output);
