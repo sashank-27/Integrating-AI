@@ -122,8 +122,12 @@ app.get(
   }
 );
 
-// Replicate setup
-const replicate = new Replicate({ auth: process.env.REPLICATE_API_KEY });
+// Replicate setup with authentication
+const replicate = new Replicate({
+  auth: {
+    apiKey: process.env.REPLICATE_API_KEY
+  }
+});
 
 // Replicate routes with authentication middleware
 app.post('/generate-image', isAuth, async (req, res) => {
