@@ -9,7 +9,7 @@ const Replicate = require('replicate');
 const path = require('path');
 
 // MongoDB connection
-const mongoUri = process.env.MONGO_URI || 'your_fallback_mongo_uri';
+const mongoUri = process.env.MONGO_URI || 'mongodb+srv://sashank-27:Sashan12k@cluster0.jyfj7kr.mongodb.net/dbname?retryWrites=true&w=majority';
 mongoose.connect(mongoUri, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => {
     console.log('Connected to MongoDB');
