@@ -24,6 +24,7 @@ const userSchema = new Schema({
     githubId: String,
     username: String,
     email: String,
+    // Add more fields as needed
 });
 const User = mongoose.model('User', userSchema);
 
@@ -31,11 +32,13 @@ const User = mongoose.model('User', userSchema);
 passport.use(new GitHubStrategy({
     clientID: process.env.GITHUB_CLIENT_ID,
     clientSecret: process.env.GITHUB_CLIENT_SECRET,
-    callbackURL: 'https://integrating-ai.onrender.com/auth/github/callback'
+    callbackURL: 'http://localhost:3000/auth/github/callback'
   },
   async function(accessToken, refreshToken, profile, cb) {
+    // Check if the user already exists in the database
     let user = await User.findOne({ githubId: profile.id });
     if (!user) {
+      // If the user doesn't exist, create a new user
       user = new User({
         githubId: profile.id,
         username: profile.username,
@@ -87,7 +90,6 @@ const isAuth = (req, res, next) => {
   if (req.user) {
     next();
   } else {
-    req.session.returnTo = req.originalUrl;
     res.redirect('/signin');
   }
 };
@@ -98,7 +100,6 @@ app.get('/', isAuth, (req, res) => {
 });
 
 app.get('/signin', (req, res) => {
-  req.session.returnTo = req.query.returnTo || '/';
   if (req.user) {
     return res.redirect('/');
   }
@@ -117,20 +118,15 @@ app.get(
   '/auth/github/callback',
   passport.authenticate('github', { failureRedirect: '/signin' }),
   function (req, res) {
-    res.redirect(req.session.returnTo || '/');
-    delete req.session.returnTo;
+    // Successful authentication, redirect home.
+    res.redirect('/');
   }
 );
 
-// Replicate setup with authentication
-const replicate = new Replicate({
-  auth: {
-    apiKey: process.env.REPLICATE_API_KEY
-  }
-});
+// Replicate routes
+const replicate = new Replicate({ auth: process.env.REPLICATE_API_KEY });
 
-// Replicate routes with authentication middleware
-app.post('/generate-image', isAuth, async (req, res) => {
+app.post('/generate-image', async (req, res) => {
   const { prompt } = req.body;
   try {
     const output = await replicate.run(
@@ -152,9 +148,9 @@ app.post('/generate-image', isAuth, async (req, res) => {
     console.log('Output object:', output);
 
     // Check if the output contains a valid URL
-    if (output && output.length > 0 && output[0].image) {
+    if (output) {
       // Send the URL in the response
-      res.json({ success: true, imageUrl: output[0].image });
+      res.json({ success: true, imageUrl: output });
     } else {
       // Log an error if the URL is not found
       console.error('Image URL not found in the response:', output);
@@ -167,7 +163,7 @@ app.post('/generate-image', isAuth, async (req, res) => {
   }
 });
 
-app.post('/generate-video', isAuth, async (req, res) => {
+app.post('/generate-video', async (req, res) => {
   const { prompt } = req.body;
   try {
     const output = await replicate.run(
@@ -186,22 +182,22 @@ app.post('/generate-video', isAuth, async (req, res) => {
     console.log('Output object:', output);
 
     // Check if the output contains a valid URL
-    if (output && output.length > 0 && output[0].video) {
+    if (output) {
       // Send the URL in the response
-      res.json({ success: true, videoUrl: output[0].video });
+      res.json({ success: true, videoUrl: output });
     } else {
       // Log an error if the URL is not found
       console.error('Video URL not found in the response:', output);
-      res.status(500).json({ success: false, error: 'Failed to generate video' });
+      res.status(500).json({ success: false, error: 'Failed to generate image' });
     }
   } catch (error) {
-    // Log and handle any errors that occur during video generation
-    console.error('Error generating video:', error);
-    res.status(500).json({ success: false, error: 'Failed to generate video' });
+    // Log and handle any errors that occur during image generation
+    console.error('Error generating image:', error);
+    res.status(500).json({ success: false, error: 'Failed to generate image' });
   }
 });
 
-app.post('/generate-audio', isAuth, async (req, res) => {
+app.post('/generate-audio', async (req, res) => {
   const { prompt } = req.body;
   try {
     const output = await replicate.run(
@@ -220,9 +216,9 @@ app.post('/generate-audio', isAuth, async (req, res) => {
     console.log('Output object:', output);
 
     // Check if the output contains a valid URL
-    if (output && output.length > 0 && output[0].audio) {
+    if (output) {
       // Send the URL in the response
-      res.json({ success: true, audioUrl: output[0].audio });
+      res.json({ success: true, audioUrl: output });
     } else {
       // Log an error if the URL is not found
       console.error('Audio URL not found in the response:', output);
